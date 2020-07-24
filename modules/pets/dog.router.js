@@ -5,21 +5,10 @@ const { Queue } = require('../queue/queue')
 const DogRouter = express.Router();
 
 DogRouter
-     .route('/')
-     .get((req, res, next) => {
-          let dog = []
+.route('/')
+.get((req, res, next) => {
 
-          // if (!dogs.first) {
-          //      res.status(200).json(["None"])
-          // }
-          // else {
-               let currNode = dogs.first;
-               while (currNode !== null) {
-                    dog.push(currNode.value)
-                    currNode = currNode.next
-               }
-          // }
-          res.status(200).json(dog)
-     })
+     res.status(200).json(show(dogs))
+})
 
 module.exports = DogRouter
