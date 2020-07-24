@@ -1,16 +1,17 @@
 const { Queue } = require('../queue/Queue')
-const store = require('../../store/store')
+const cats = require('../../store/cats')
+const dogs = require('../../store/dogs')
 
 // Set up initial data.
 // --------------------
 
-const pets = {
-  cats: new Queue(),
-  dogs: new Queue()
-}
+// const pets = {
+//   cats: new Queue(),
+//   dogs: new Queue()
+// }
 
-store.cats.forEach(cat => pets.cats.enqueue(cat))
-store.dogs.forEach(dog => pets.dogs.enqueue(dog))
+cats.forEach(cat => cats.enqueue(cat))
+dogs.forEach(dog => dogs.enqueue(dog))
 
 // --------------------
 
