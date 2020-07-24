@@ -126,5 +126,6 @@ function dogQ(arr) {
 const fullDogQ = dogQ(dogs)
 
 module.exports = {
-     fullDogQ
+     fullDogQ,
+     dogs
 }

@@ -54,6 +54,7 @@ function isEmpty(queue) {
 }
 
 module.exports = {
+     _Node,
      Queue,
      show,
      all,

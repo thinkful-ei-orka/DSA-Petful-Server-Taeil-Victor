@@ -1,16 +1,35 @@
 const express = require('express')
-const json = require('body-parser').json()
+const { Queue } = require('../queue/queue')
+const { show } = require('../queue/queue')
 
-const People = require('./people.service')
+const { fullPeopleQueue } = require('../../store/people')
 
-const router = express.Router()
+const PeopleRouter = express.Router()
+const jsonParser = express.json()
 
-router.get('/', (req, res) => {
+PeopleRouter
   // Return all the people currently in the queue.
-})
+  .route('/')
+  .get((req, res, next) => {
+    res.status(200).json(show(fullPeopleQueue))
+  })
 
-router.post('/', json, (req, res) => {
-  // Add a new person to the queue.
-})
+  .post(jsonParser, (req, res, next) => {
+    // Add a new person to the queue.
+    const { user_name } = req.body;
+    fullPeopleQueue.enqueue(user_name);
+    return res.status(201).json({ user_name })
+  })
 
-module.exports = router
+
+  .delete((req, res, next) => {
+    const user = fullPeopleQueue.dequeue();
+    if (user === null) {
+      return res.status(404).json({ message: 'No users found.' });
+    }
+    return res.sendStatus(204)
+  })
+
+
+
+module.exports = PeopleRouter

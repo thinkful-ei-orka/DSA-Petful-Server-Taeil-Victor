@@ -6,6 +6,7 @@ const { NODE_ENV } = require('../../config');
 
 const CatRouter = require('../pets/cat.router')
 const DogRouter = require('../pets/dog.router')
+const PeopleRouter = require('../people/people.router')
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
 
-// app.use('/api/people', require('../people/people.router'))
+app.use('/api/people', PeopleRouter)
 // app.use('/api/pets', require('../pets/pets.router'))
 app.use('/api/cats', CatRouter)
 app.use('/api/dogs', DogRouter)

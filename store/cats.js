@@ -123,5 +123,6 @@ function catQ(arr) {
 const fullCatQ = catQ(cats)
 
 module.exports = {
-     fullCatQ
+     fullCatQ,
+     cats
 }
