@@ -22,10 +22,10 @@ CatRouter
           return res.sendStatus(204)
      })
      .post(jsonParser, (req, res, next) => {
-          // Add a new person to the queue.
+          // Add a new cat to the queue.
           const { age, breed, description, gender, imageURL, name, story } = req.body;
           fullCatQ.enqueue(req.body);
-          return res.status(201).json({ age, breed, description, gender, imageURL, name, story  })
+          return res.status(201).json(req.body)
         })
 
 CatRouter
