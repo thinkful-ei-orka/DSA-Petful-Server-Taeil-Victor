@@ -1,6 +1,5 @@
 const express = require('express')
 const adoptedRouter = express.Router()
-const adoptedService = require('./adopted.service')
 const {adopted} = require('./adopted.service')
 
 adoptedRouter 
