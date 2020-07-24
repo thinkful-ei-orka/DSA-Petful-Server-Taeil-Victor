@@ -18,5 +18,6 @@ function peopleQ(arr) {
 const fullPeopleQueue = peopleQ(people)
 
 module.exports = {
-     fullPeopleQueue
+     fullPeopleQueue,
+     people
 }

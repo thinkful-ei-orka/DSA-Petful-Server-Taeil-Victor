@@ -2,7 +2,7 @@ const express = require('express');
 const { fullDogQ } = require('../../store/dogs')
 const { Queue } = require('../queue/queue')
 const { show } = require('../queue/queue');
-const dogs = require('../../store/dogs');
+const { dogs } = require('../../store/dogs');
 
 
 const DogRouter = express.Router();
@@ -21,9 +21,9 @@ DogRouter
           return res.sendStatus(204)
      })
 
-     DogRouter
+DogRouter
      .route('/all')
-     .get((req,res,next) => {
+     .get((req, res, next) => {
           res.status(200).json(dogs)
      })
 

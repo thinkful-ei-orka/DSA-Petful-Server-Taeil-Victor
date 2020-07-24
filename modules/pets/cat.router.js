@@ -3,7 +3,7 @@ const { fullCatQ } = require('../../store/cats')
 const { Queue } = require('../queue/queue')
 const { show } = require('../queue/queue')
 const People = require('../../store/people');
-const cats = require('../../store/cats');
+const { cats } = require('../../store/cats');
 
 const CatRouter = express.Router();
 
