@@ -98,16 +98,6 @@ const cats = [
           imageURL: 'https://images.pexels.com/photos/923360/pexels-photo-923360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
           name: 'Spike',
           story: 'Thrown on the street',
-     },
-
-     {
-          age: 3,
-          breed: 'Tabby',
-          description: 'boxer dog',
-          gender: 'Male',
-          imageURL: 'https://images.pexels.com/photos/1472999/pexels-photo-1472999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          name: 'Vince the Pince',
-          story: 'Found in neighborhood'
      }
 ]
 
