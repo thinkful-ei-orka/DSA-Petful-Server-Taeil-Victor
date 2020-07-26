@@ -7,9 +7,11 @@ const dogs = require('../../store/dogs')
 
 const cats = new Queue()
 const dogs = new Queue()
+const pets = new Queue()
 
 cats.forEach(cat => fullCatQ.enqueue(cat))
 dogs.forEach(dog => fullDogQ.enqueue(dog))
+pets.forEach(pet => fullPetQ.enqueue(pet))
 
 // --------------------
 

@@ -8,6 +8,7 @@ const CatRouter = require('../pets/cat.router')
 const DogRouter = require('../pets/dog.router')
 const PeopleRouter = require('../people/people.router')
 const adoptedRouter = require('../adopted/adopted.router')
+const PetsRouter = require('../pets/pets.router')
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/api/people', PeopleRouter)
 app.use('/api/adopted', adoptedRouter)
 app.use('/api/cats', CatRouter)
 app.use('/api/dogs', DogRouter)
+app.use('/api/pets', PetsRouter)
 
 app.get('/', (req, res) => {
      res.send('Hello, world!')

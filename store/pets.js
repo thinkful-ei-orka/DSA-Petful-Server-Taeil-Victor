@@ -1,3 +1,5 @@
+const { Queue } = require('../modules/queue/queue')
+
 const pets = {
      dogs: [
           {
@@ -221,4 +223,20 @@ const pets = {
                story: 'Found in neighborhood'
           }
      ]
+}
+
+function petQ(arr) {
+     let petsQ = new Queue();
+
+     for (let i = 0; i < arr.length; i++) {
+          petsQ.enqueue(arr[i])
+     }
+     return petsQ
+}
+
+const fullPetQ = petQ(pets)
+
+module.exports = {
+     fullPetQ,
+     pets
 }
