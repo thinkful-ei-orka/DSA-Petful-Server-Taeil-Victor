@@ -12,7 +12,6 @@ PeopleRouter
   // Return all the people currently in the queue.
   .route('/')
   .get((req, res, next) => {
-    console.log(people)
     res.status(200).json(people)
   })
 
@@ -22,17 +21,14 @@ PeopleRouter
     // this is currently adding to both the queue and the array
     fullPeopleQueue.enqueue(user_name);
     people.push(user_name);
-    console.log(fullPeopleQueue);
     return res.status(201).json({ user_name });
   })
 
 
   .delete((req, res, next) => {
-    //
+    // this is currently removing from the queue and the array
     const user = fullPeopleQueue.dequeue();
     people.shift();
-
-    console.log(people);
 
     if (user === null) {
       return res.status(404).json({ message: 'No users found.' });
