@@ -34,7 +34,7 @@ DogRouter
           const { age, breed, description, gender, imageURL, name, story } = req.body;
           fullDogQ.enqueue(req.body);
           dogs.push(req.body)
-          console.log(fullCatQ);
+          console.log(fullDogQ);
           return res.status(201).json({ age, breed, description, gender, imageURL, name, story })
         })
 
