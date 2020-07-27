@@ -1,7 +1,9 @@
 {
   "name": "petful-server-taeil-victor",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
