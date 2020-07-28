@@ -4,7 +4,7 @@ Programmed by **Taeil Kwak** and **Victor Jarvis** for Thinkful's Software Engin
 
 This was created using Javascript, Node.js, and Express.
 
-Server Link: <https://petful-server-tv.herokuapp.com/>
+Server Link: <https://petful-server-tv.herokuapp.com/><br />
 Live Client Project Link: <https://github.com/thinkful-ei-orka/DSA-Petful-Client-Taeil-Victor>
 
 ## API Documentation
