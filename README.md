@@ -42,7 +42,7 @@ Returns all cats currently up for adoption.
      *Content:* Cats
 
 **Error Response** <br />
-     *Code:* 404
+     *Code:* 404<br />
      *Content:* 'No cats found.' <br />
 
 ---
@@ -62,7 +62,7 @@ Returns all dogs currently up for adoption.
      *Content:* Dogs
 
 **Error Response** <br />
-     *Code:* 404
+     *Code:* 404<br />
      *Content:* 'No dogs found.' <br />
 
 ---
@@ -82,7 +82,7 @@ Returns all the people currently in the queue.
      *Content:* People
 
 **Error Response** <br />
-     *Code:* 404
+     *Code:* 404<br />
      *Content:* 'No users found.' <br />
 
 ---
@@ -139,7 +139,7 @@ Posts the users name to the line to adopt.
      *Content:* User name
 
 **Error Response** <br />
-     *Content:* 'errorMessage: 'Please enter a name.' <br />
+     *Content:* 'Please enter a name.' <br />
 
 ---
 
@@ -155,4 +155,4 @@ Returns all of the previously adopted pets.
 
 **Success Response**<br />
      *Code:* 200<br />
-     *Content:* adopted
+     *Content:* Adopted
