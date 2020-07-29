@@ -9,7 +9,7 @@ const PeopleRouter = express.Router()
 const jsonParser = express.json()
 
 PeopleRouter
-  // Return all the people currently in the queue.
+  // Return all the people currently in the queue
   .route('/')
   .get((req, res, next) => {
     res.status(200).json(people)
