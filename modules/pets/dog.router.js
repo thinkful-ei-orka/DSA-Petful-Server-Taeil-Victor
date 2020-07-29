@@ -4,6 +4,7 @@ const { Queue } = require('../queue/queue')
 const { show } = require('../queue/queue');
 const { dogs } = require('../../store/dogs');
 const { fullPeopleQueue } = require('../../store/people');
+const { people } = require('../../store/people')
 const { adopted } = require('../adopted/adopted.service')
 
 
@@ -19,13 +20,14 @@ DogRouter
      .delete((req, res, next) => {
           const adopt = fullDogQ.dequeue();
           const newOwner = fullPeopleQueue.dequeue();
+          people.shift();
           if (adopt === null) {
                return res.status(404).json({ message: 'No dogs found.' });
           }
           adopt.newOwner = newOwner
           adopted.enqueue(adopt)
-          console.log(newOwner)
-          console.log(adopt)
+          // console.log(newOwner)
+          // console.log(adopt)
           return res.status(200).json(newOwner.people)
      })
 
@@ -34,7 +36,7 @@ DogRouter
           const { age, breed, description, gender, imageURL, name, story } = req.body;
           fullDogQ.enqueue(req.body);
           dogs.push(req.body)
-          console.log(fullDogQ);
+          // console.log(fullDogQ);
           return res.status(201).json({ age, breed, description, gender, imageURL, name, story })
         })
 

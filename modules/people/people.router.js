@@ -24,7 +24,6 @@ PeopleRouter
     return res.status(201).json({ user_name });
   })
 
-
   .delete((req, res, next) => {
     // this is currently removing from the queue and the array
     const user = fullPeopleQueue.dequeue();
